@@ -1,0 +1,10 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface BeanFactory {}
+interface ApplicationContext extends BeanFactory {}
+class AnnotationApplicationContext implements ApplicationContext {}
+class GenericXmlApplicationContext implements ApplicationContext {}
+class XxxApplicationContext implements ApplicationContext {}
+
+@enduml
