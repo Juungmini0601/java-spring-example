@@ -3,4 +3,5 @@ rootProject.name = 'codevillan-study-example'
 include 'spring-di-example'
 include 'spring-redis-example'
 include 'java-simple-example'
+include 'spring-kafka-example'
 
