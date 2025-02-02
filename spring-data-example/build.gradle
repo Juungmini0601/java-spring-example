@@ -1,0 +1,10 @@
+dependencies {
+    // JDBC
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    // H2
+    runtimeOnly 'com.h2database:h2'
+}
+
+test {
+    useJUnitPlatform()
+}
