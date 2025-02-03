@@ -1,0 +1,32 @@
+require 'yaml'
+settings = YAML.load_file(File.join(File.dirname(__FILE__), 'settings.yaml'))
+
+Vagrant.configure("2") do |config|
+    config.vm.box = settings['box_name']
+    # 업데이트를 계속 확인 하지 않도록
+    config.vm.box_check_update = false
+    # vm_config에는 name, ip, memory, cpus 포함
+    settings['vm'].each do |vm_config|
+        config.vm.define vm_config['name'] do |vm|
+          vm.vm.hostname = vm_config['name']
+          vm.vm.network "private_network", ip: vm_config['ip']
+          vm.vm.synced_folder ".", "/vagrant", disabled: false
+
+          vm.vm.provider "vmware_fusion" do |vb|
+            vb.gui = false
+            vb.memory = vm_config['memory']
+            vb.cpus = vm_config['cpus']
+          end
+
+          # 기초 의존성 설치
+          vm.vm.provision "shell", inline: <<-SHELL
+            apt update
+            apt upgrade -y
+            apt install -y wget vim net-tools gcc make tar git unzip sysstat tree
+            echo "192.168.111.101 server1" >> /etc/hosts
+            echo "192.168.111.102 server2" >> /etc/hosts
+            echo "192.168.111.103 server3" >> /etc/hosts
+          SHELL
+        end
+      end
+  end

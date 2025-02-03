@@ -1,0 +1,15 @@
+# settings.yaml
+box_name: "bento/centos-stream-9"
+vm:
+  - name: "server1"
+    ip: "192.168.111.101"
+    memory: "2048"
+    cpus: "2"
+  - name: "server2"
+    ip: "192.168.111.102"
+    memory: "2048"
+    cpus: "2"
+  - name: "server3"
+    ip: "192.168.111.103"
+    memory: "2048"
+    cpus: "2"
