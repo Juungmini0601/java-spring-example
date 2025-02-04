@@ -5,4 +5,5 @@ include 'spring-redis-example'
 include 'java-simple-example'
 include 'spring-kafka-example'
 include 'spring-data-example'
+include 'spring-web-example'
 

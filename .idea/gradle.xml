@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/spring-di-example" />
             <option value="$PROJECT_DIR$/spring-kafka-example" />
             <option value="$PROJECT_DIR$/spring-redis-example" />
+            <option value="$PROJECT_DIR$/spring-web-example" />
           </set>
         </option>
       </GradleProjectSettings>
