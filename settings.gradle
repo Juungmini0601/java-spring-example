@@ -1,4 +1,4 @@
-rootProject.name = 'codevillan-study-example'
+rootProject.name = 'java-spring-study-example'
 
 include 'spring-di-example'
 include 'spring-redis-example'
