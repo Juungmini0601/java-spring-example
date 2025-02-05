@@ -20,12 +20,12 @@ Vagrant.configure("2") do |config|
 
           # 기초 의존성 설치
           vm.vm.provision "shell", inline: <<-SHELL
-            apt update
-            apt upgrade -y
-            apt install -y wget vim net-tools gcc make tar git unzip sysstat tree
-            echo "192.168.111.101 server1" >> /etc/hosts
-            echo "192.168.111.102 server2" >> /etc/hosts
-            echo "192.168.111.103 server3" >> /etc/hosts
+            dnf update
+            dnf upgrade -y
+            dnf install -y wget vim net-tools gcc make tar git unzip sysstat tree
+            echo "192.168.111.101 master" >> /etc/hosts
+            echo "192.168.111.102 node01" >> /etc/hosts
+            echo "192.168.111.103 node02" >> /etc/hosts
           SHELL
         end
       end
