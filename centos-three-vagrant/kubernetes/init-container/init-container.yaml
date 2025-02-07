@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: init-demo
+spec:
+  initContainers:
+    - name: init-myservice
+      image: busybox:1.28
+      #      Init Container가 work-dir에 init.txt에 파일 생성
+      command: [ 'sh', '-c', 'echo "초기화 완료!" > /work-dir/init.txt' ]
+      volumeMounts:
+        - name: shared-data
+          mountPath: /work-dir
+
+  containers:
+    - name: main-app
+      image: busybox:1.28
+      #     30초에 한번씩 파일을 읽는다.
+      command: [ 'sh', '-c', 'while true; do cat /work-dir/init.txt; sleep 10; done' ]
+      volumeMounts:
+        - name: shared-data
+          mountPath: /work-dir
+
+  volumes:
+    - name: shared-data
+      emptyDir: { }

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myweb-svc
+spec:
+  selector:
+    # Pod의 라벨을 지정
+    app: myweb1
+  ports:
+    # 외부에 노출 되는 포트
+    - port: 8001
+      targetPort: 80
+  externalIPs:
+    # 외부에서 접근하는데 사용하는 IP
+    - 192.168.111.103
