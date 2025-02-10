@@ -4,25 +4,19 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/spring-jooq-example" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/java-simple-example" />
             <option value="$PROJECT_DIR$/spring-data-example" />
             <option value="$PROJECT_DIR$/spring-di-example" />
+            <option value="$PROJECT_DIR$/spring-jooq-example" />
+            <option value="$PROJECT_DIR$/spring-jooq-example/jooq-custom" />
             <option value="$PROJECT_DIR$/spring-kafka-example" />
+            <option value="$PROJECT_DIR$/spring-rabbitmq-example" />
             <option value="$PROJECT_DIR$/spring-redis-example" />
             <option value="$PROJECT_DIR$/spring-web-example" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/spring-jooq-example" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/spring-jooq-example" />
           </set>
         </option>
       </GradleProjectSettings>

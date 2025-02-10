@@ -1,0 +1,11 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: qwer1234
+
+logging:
+  level:
+    org.springframework.amqp: DEBUG
+    com.raon.example.rabbitmq: DEBUG
