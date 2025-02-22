@@ -1,13 +1,3 @@
 rootProject.name = 'java-spring-study-example'
-
-include 'spring-di-example'
-include 'spring-redis-example'
-include 'java-simple-example'
-include 'spring-kafka-example'
-include 'spring-data-example'
-include 'spring-web-example'
-include 'spring-jooq-example'
-include 'spring-jooq-example:jooq-custom'
-findProject(':spring-jooq-example:jooq-custom')?.name = 'jooq-custom'
-include 'spring-rabbitmq-example'
+include 'java-example'
 
