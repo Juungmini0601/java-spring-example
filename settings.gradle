@@ -1,3 +1,4 @@
 rootProject.name = 'java-spring-study-example'
-include 'java-example'
 
+include 'java-example'
+include 'spring-example'

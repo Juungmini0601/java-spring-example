@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/java-example" />
+            <option value="$PROJECT_DIR$/spring-example" />
           </set>
         </option>
       </GradleProjectSettings>
